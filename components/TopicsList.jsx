@@ -35,7 +35,7 @@ const TopicsList = async () => {
 					<div className="flex justify-between items-center">
 						<h2 className="text-2xl font-bold text-slate-800">{topic.title}</h2>
 						<div className="flex gap-2">
-							<RemoveBtn />
+							<RemoveBtn id={topic._id} />
 							<Link href={`/editTopic/${topic._id}`}>
 								<HiPencilAlt
 									size={24}

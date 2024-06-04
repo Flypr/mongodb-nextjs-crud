@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { UploadFile } from '@/libs/actions';
-import { set } from 'mongoose';
 
 const AddTopic = () => {
 	const [title, setTitle] = useState('');
@@ -30,6 +29,7 @@ const AddTopic = () => {
 
 			if (res.ok) {
 				router.push('/');
+				router.refresh();
 			} else {
 				throw new Error('Failed to create topic');
 			}
